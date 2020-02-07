@@ -39,3 +39,18 @@ complete_profile = { name: { first: "Brian", last: "Eng" },
 
 # And we might have to jump through a few hoops to get the data we're looking for:
 complete_profile[:timeline][0][:status] # Eating tacos
+
+# p.s. Hashes can be written two different ways
+
+# Method #1: The way we've already learned
+# Written this way, the key is accessed by what's known as a "Symbol", i.e. a word with a colon preceding it.
+my_profile = { name: "Brian", location: "Chicago" }
+puts my_profile[:name]
+
+# Method #2: The "fat arrow" or "hash-rocket" way
+# Written this way, the key can be anything.
+# You'll notice that, internally, Ruby stores hashes this way.
+my_profile = { "name" => "Brian", "location" => "Chicago" }
+puts my_profile["name"]
+
+# It really doesn't matter which one you choose... I like method #1 because it's less typing.
